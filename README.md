@@ -1,12 +1,12 @@
-# React + Vite
+# Vending Machine Demo with Taranium Blockchain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple demo related to Defi running on Taranium Test-Net.
 
-Currently, two official plugins are available:
+This Defi demonstrates how to utilize a simple Smart Contract Vending Machine. This application is developed using the Veti + React + TailwindCSS framework.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Basic functions:
+"Vending Machine" as a simple form of smart contract: 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User inserts money,
+- selects a product, and
+- the machine automatically dispenses the goods without human intermediary.
