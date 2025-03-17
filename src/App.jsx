@@ -13,13 +13,14 @@ const App = () => {
     };
 
     return (
-        <Box sx={{ bgcolor: 'background.paper', color: "#fff", borderRadius: 3, p: 6, minWidth: 300,}}>
+        <Box sx={{ bgcolor: '#223f56', color: "#fff", borderRadius: 3, p: 6, minWidth: 300,}}>
             <Grid2 spacing={0} direction="column" sx={{ alignItems: "center" }}>
                 {/* Kolom Kiri (Kosong) */}
                 <Grid2 xs={2} />
 
                 {/* Kolom Tengah (Konten Utama) */}
                 <Grid2 xs={8}>
+                    <img src="/logo.png" height={100}/>
                     <Paper elevation={6} sx={{ p: 4, textAlign: "center", backgroundColor: "#e9edee", color: "#fff" }}>
                         <Typography variant="h3" fontWeight="bold" color="#4C4D4F" gutterBottom>
                             🛒 Vending Machine DApp
