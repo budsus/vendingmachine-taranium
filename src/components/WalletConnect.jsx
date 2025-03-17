@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { web3 } from '../web3';
+import React, { useState } from "react";
+import { web3 } from "../web3";
+import { Button, Typography } from "@mui/material";
 
 const WalletConnect = ({ setAccount }) => {
     const [connected, setConnected] = useState(false);
@@ -15,11 +16,13 @@ const WalletConnect = ({ setAccount }) => {
     };
 
     return (
-        <div>
+        <div style={{ marginBottom: "20px" }}>
             {connected ? (
-                <p>Wallet Terhubung ✅</p>
+                <Typography color="green" fontWeight="bold">✅ Wallet Terhubung</Typography>
             ) : (
-                <button onClick={connectWallet}>Hubungkan MetaMask</button>
+                <Button variant="contained" color="success" onClick={connectWallet}>
+                    Hubungkan MetaMask
+                </Button>
             )}
         </div>
     );

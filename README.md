@@ -2,7 +2,7 @@
 
 This project is a simple demo related to Defi running on Taranium Test-Net.
 
-This Defi demonstrates how to utilize a simple Smart Contract Vending Machine. This application is developed using the [Veti + React](https://vite.dev/guide/) + [TailwindCSS](https://tailwindcss.com/) framework.
+This Defi demonstrates how to utilize a simple Smart Contract Vending Machine. This application is developed using the [Veti + React](https://vite.dev/guide/) + [Material UI](https://mui.com/material-ui/) framework.
 
 ## Basic functions:
 "Vending Machine" as a simple form of smart contract: 

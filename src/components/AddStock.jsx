@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { vendingMachine, web3 } from '../web3';
+import React, { useState, useEffect } from "react";
+import { vendingMachine } from "../web3";
+import { TextField, Button, Typography } from "@mui/material";
 
 const AddStock = ({ account, onStockUpdated }) => {
     const [productId, setProductId] = useState('');
@@ -27,11 +28,8 @@ const AddStock = ({ account, onStockUpdated }) => {
             await vendingMachine.methods.addStock(productId, quantity).send({ from: account });
 
             alert(`Stok berhasil ditambahkan! Produk ID: ${productId}, Jumlah: ${quantity}`);
-
             setProductId('');
             setQuantity('');
-
-            // Panggil fungsi untuk memperbarui stok di ProductList
             onStockUpdated();
         } catch (error) {
             console.error("Gagal menambah stok:", error);
@@ -39,28 +37,14 @@ const AddStock = ({ account, onStockUpdated }) => {
         }
     };
 
-    return (
+    return isOwner && (
         <div>
-            {isOwner ? (
-                <>
-                    <h2>Tambah Stok Produk</h2>
-                    <input 
-                        type="number" 
-                        placeholder="ID Produk" 
-                        value={productId} 
-                        onChange={(e) => setProductId(e.target.value)} 
-                    />
-                    <input 
-                        type="number" 
-                        placeholder="Jumlah Stok" 
-                        value={quantity} 
-                        onChange={(e) => setQuantity(e.target.value)} 
-                    />
-                    <button onClick={addStock}>Tambah Stok</button>
-                </>
-            ) : (
-                <p>Hanya pemilik kontrak yang bisa menambah stok.</p>
-            )}
+            <Typography variant="h6" fontWeight="bold" gutterBottom>Tambah Stok Produk</Typography>
+            <TextField label="ID Produk" type="number" fullWidth value={productId} onChange={(e) => setProductId(e.target.value)} margin="normal" />
+            <TextField label="Jumlah Stok" type="number" fullWidth value={quantity} onChange={(e) => setQuantity(e.target.value)} margin="normal" />
+            <Button variant="contained" color="warning" onClick={addStock} sx={{ mt: 2 }}>
+                Tambah Stok
+            </Button>
         </div>
     );
 };
