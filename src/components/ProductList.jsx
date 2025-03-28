@@ -55,7 +55,7 @@ const ProductList = ({ account, refreshSignal, onTransaction }) => {
                             <CardContent sx={{ textAlign: "center" }}>
                                 <Typography variant="h6">{product.name}</Typography>
                                 <Typography color="yellow">{product.price} TARAN</Typography>
-                                <Typography color={product.stock > 0 ? "green" : "red"}>
+                                <Typography color={product.stock > 0 ? "#83b74d" : "red"}>
                                     Stok: {product.stock}
                                 </Typography>
                                 <Button
